@@ -1,0 +1,15 @@
+name: 'Release Node Package to GitHub Packages'
+description: 'Builds and publishes node packages GitHub Packages'
+author: 'Greenhouse'
+branding:
+  color: green
+  icon: upload-cloud
+inputs:
+  token:
+    description: 'Use `secrets.GITHUB_TOKEN` for this'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.token }}
