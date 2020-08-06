@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Build and publish npm package
-        uses: grnhse/publish-javascript-package-to-github
+        uses: grnhse/publish-javascript-package-to-github@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 ```
